@@ -12,10 +12,10 @@ class Book:
         
     def to_dict(self):
         return {
-            'title' : self.title,
-            'author' : self.author,
-            'year' : self.year,
-            'publisher' : self.publisher,
+            'title': self.title,
+            'author': self.author,
+            'year': self.year,
+            'publisher': self.publisher,
         }
     
 class Library:
@@ -63,38 +63,36 @@ class Library:
         for book in self.books:
             print(f'Title: {book.title}, Author: {book.author}, Year: {book.year}, Publisher: {book.publisher}')
 
-    def main():
-        library = Library()
-        while True:
-            print("\nLibrary Management System")
-            print("1. Add Book")
-            print("2. View Books")
-            print("3. Search Books")
-            print("4. Exit")
-            choice = input("Enter your choice: ")
+def main():
+    library = Library()
+    while True:
+        print("\nLibrary Management System")
+        print("1. Add Book")
+        print("2. View Books")
+        print("3. Search Books")
+        print("4. Exit")
+        choice = input("Enter your choice: ")
 
-            if choice == '1':
-                title = input("Enter book title: ")
-                author = input("Enter book author: ")
-                year = input("Enter publication year: ")
-                publisher = input("Enter publisher: ")
-                library.add_book(title, author, year, publisher)
-            elif choice == '2':
-                library.view_books()
-            elif choice == '3':
-                search = input("Enter search term (title, author, or publisher): ")
-                results = library.find_book(search)
-                if results:
-                    for book in results:
-                        print(f'Title: {book.title}, Author: {book.author}, Year: {book.year}, Publisher: {book.publisher}')
-                else:
-                    print("No books found.")
-            elif choice == '4':
-                break
+        if choice == '1':
+            title = input("Enter book title: ")
+            author = input("Enter book author: ")
+            year = input("Enter publication year: ")
+            publisher = input("Enter publisher: ")
+            library.add_book(title, author, year, publisher)
+        elif choice == '2':
+            library.view_books()
+        elif choice == '3':
+            search = input("Enter search term (title, author, or publisher): ")
+            results = library.find_book(search)
+            if results:
+                for book in results:
+                    print(f'Title: {book.title}, Author: {book.author}, Year: {book.year}, Publisher: {book.publisher}')
             else:
-                print("Invalid choice. Please try again.")
+                print("No books found.")
+        elif choice == '4':
+            break
+        else:
+            print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
-    Library.main()
-
-    
+    main()
