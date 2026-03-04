@@ -1,17 +1,5 @@
 [
     {
-        "title": "Atomic Habits",
-        "author": "James Clear",
-        "year": "2018",
-        "publisher": "Avery"
-    },
-    {
-        "title": "28 commandments",
-        "author": "Andrew Kibe",
-        "year": "2025",
-        "publisher": "Wantam Publishers"
-    },
-    {
         "title": "The art of war",
         "author": "Sun Tzu",
         "year": "2004",
@@ -22,5 +10,11 @@
         "author": "Steven Bartlett",
         "year": "2023",
         "publisher": "Penguin Random House"
+    },
+    {
+        "title": "58 laws",
+        "author": "Robert green",
+        "year": 2003,
+        "publisher": "longhorn"
     }
 ]
